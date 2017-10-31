@@ -15,7 +15,7 @@ function isPrime(number) {
   let result = true;
 
   if (number < 2) {
-    return false;
+    result = false;
   }
 
   for (let i = 2; i < number; i++) {

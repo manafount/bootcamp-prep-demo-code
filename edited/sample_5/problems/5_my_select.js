@@ -25,7 +25,16 @@ function mySelect(arr, cb) {
   var answer = []
   for (var i = 0; i < arr.length; i++) {
     var el = arr[i]
-    if (cb(el, i, arr)== true) {
+    /* 
+      When evaluating for equality in javascript, always use ===!
+      Also, if cb returns a truthy or falsey value, you can use that
+      return value rather than testing whether it == true. 
+      Example: 
+      if (cb(el, i, arr)) { 
+        answer.push(el); 
+      }
+    */
+    if (cb(el, i, arr)== true) { 
       answer.push(el)
 
     }

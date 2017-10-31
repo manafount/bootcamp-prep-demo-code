@@ -19,14 +19,15 @@ minValueCallback(array2, double); // => 18
 *******************************************************************************/
 
 function minValueCallback(array, cb) {
-  var min = null
+  // by now you know what I'm going to say - don't forget your semicolons! -MK
+  var min = null // good work! instead of 'null', you could also declare min without a value: `var min;` and test for 'undefined' -MK
   for (var i = 0; i < array.length; i++){
     var num = array[i]
     if (min === null || num < min) {
       min = num
     }
   }
-  return cb(min)
+  return cb(min) // this is correct, but in some cases you may want to assign cb(min) to an intermediate variable before returning the value -MK
 }
 
 

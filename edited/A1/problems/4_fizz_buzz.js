@@ -11,7 +11,7 @@ function fizzBuzz(max) {
   // your code here...
   let result = [];
 
-  for(let i=0; i<max; i++) {
+  for(let i = 0; i < max; i++) {
     if (i % 3 === 0 && i % 5 === 0) { 
       continue;
     }else if(i % 3 === 0 || i % 5 === 0) {

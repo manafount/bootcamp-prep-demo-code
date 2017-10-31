@@ -19,9 +19,10 @@ var arr2 = [
 ];
 sum2DArray(arr2); // => 3
 *******************************************************************************/
-
+// Great job working with multidimensional arrays! -MK
+// Your code is clean and properly indented, just remember your semicolons! ;) -MK
 function sum2DArray(array) {
-  var count = 0
+  var count = 0 
   for (var i = 0; i < array.length; i++){
     var inner = array[i]
     for (var j = 0; j < inner.length; j++){

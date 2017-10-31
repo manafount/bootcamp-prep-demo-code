@@ -12,7 +12,7 @@ stringRange(3, 20, 5) => '381318'
 function stringRange(min, max, step) {
   // your code here...
   let result = '';
-  for(let i=min; i<=max; i+=step) {
+  for(let i = min; i <= max; i += step) {
     result = result + i;
   }
 
