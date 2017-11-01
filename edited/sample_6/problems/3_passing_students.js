@@ -27,23 +27,25 @@ passingStudents(students); // => [ 'Kush', 'Ned' ]
 *******************************************************************************/
 
 function passingStudents(students) {
-var average = 0;
-var bestStudent = [];
+// these variable declarations should be indented, otherwise they look like they're outside the scope of the function! -MK
+var average = 0; // this will work, but it refers to the average of each individual student, so I would put it inside of the for loop -MK
+var bestStudent = []; // maybe use 'bestStudents', since bestStudent implies there can be only one -MK
 
   for (var i = 0; i < students.length; i += 1) {
+    debugger
     var student = students[i];
     var studentName = student.name;
     var studentGrades = student.grades;
     var sum = 0;
 
-    for (var key in studentGrades) {
+    for (var key in studentGrades) { // good use of for-in to loop through properties of an object! -MK
       var studentScore = studentGrades[key].score;
       sum += studentScore;
 
       }
-      average = sum / 3;
+      average = sum / 3; // uh oh! students can have any number of grades, so you won't always divide by 3 for the average -MK
       if (average >= 75) {
-      bestStudent.push(studentName);
+      bestStudent.push(studentName); // remember to indent code inside of each 'block' of a conditional -MK
       }
     }
   return bestStudent;

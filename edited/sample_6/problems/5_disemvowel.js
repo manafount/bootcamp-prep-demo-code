@@ -9,6 +9,7 @@ disemvowel('PREP'); // => 'PRP'
 disemvowel('hello world'); // => 'hll wrld'
 *******************************************************************************/
 
+// good job deconstructing the problem into smaller pieces :) -MK
 function isVowel(char) {
   var vowels = ['a', 'e', 'i', 'o', 'u'];
   var letter = char.toLowerCase();
@@ -21,11 +22,11 @@ function disemvowel(string) {
   var newStr = '';
 
   for (var i = 0; i < string.length; i += 1) {
-    var char = string[i];
+    var char = string[i]; // good use of intermediate variables for code clarity -MK
 
     if(isVowel(char)) {
       continue;
-
+      // the empty line here is unnecessary -MK
     } else {
       newStr += char;
     }

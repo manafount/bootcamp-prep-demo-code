@@ -20,11 +20,17 @@ function myMap(arr, cb) {
   // your code here...
   let result = [];
   arr.forEach((element, index) => {
+    debugger;
     result.push(cb(element, index, arr));
   });
 
   return result;
 }
 
+function multiply(num1, num2) {
+  return num1 * num2;
+}
+
+myMap([2, 4, 6, 6], multiply);
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
-module.exports = myMap;
+// module.exports = myMap;

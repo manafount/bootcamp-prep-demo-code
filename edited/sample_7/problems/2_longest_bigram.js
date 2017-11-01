@@ -11,12 +11,12 @@ longestBigram("One must have a mind of winter"); // => 'must have'
 longestBigram("go home to eat"); // => 'go home'
 longestBigram("his last assessment is fun"); // => 'last assessment'
 *******************************************************************************/
-
+// perfect solution! great job using intermediate variables to clarify your code! -MK
 function longestBigram(sentence) {
   var words = sentence.split(' ');
   var longest = '';
 
-  for (var i = 0; i < words.length - 1; i++) {
+  for (var i = 0; i < words.length - 1; i++) { // good job remembering to only loop up to words.length - 1! -MK
     var word = words[i];
     var nextWord = words[i + 1];
     var bigram = word + ' ' + nextWord;
